@@ -34,7 +34,7 @@ namespace AdminUserActionsApp.Controllers
             return View();
         }
 
-        [Authorize(Roles = "Administrator")]
+      //  [Authorize(Roles = "Administrator")]
         public ActionResult CreateAdminRole()
         {
             var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new AppContext()));
