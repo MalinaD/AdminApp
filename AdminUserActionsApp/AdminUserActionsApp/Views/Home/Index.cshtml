@@ -3,29 +3,25 @@
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>ASP.NET Identity App</h1>
+    <p class="lead">ASP.NET Application that implement MVC Login, Logout, User and Admin Pages.</p>
+    <p>
+        My task is to implement a MVC application holding anonymous, user and admin pages + login and logout. <br/>
+        <ul>
+            <li>In Visual Studio create a new ASP.NET MVC application with authentication enabled (with individual user accounts).</li>
+            <li>Enable the Entity Framework migrations for the ApplicationDbContext.</li>
+            <li>In the Seed() method in your DB migration class add some code to create "Administrator" role and user admin@admin.com in this role.</li>
+            <li>You should already have HomeController and AccountController. Add also these controllers:
+                 <ul>
+                    <li>UserController – accessible for authorized users only (after login). Create a view behind the default controller action and show a message "For users only: welcome " + username.</li>
+                     <li>AdminController – accessible for administrator users only (after admin login). Create a view behind the default controller action and show a message "For administrators only: welcome " + username.</li>
+                </ul>
+            </li>
+            <li>The home page and login page should be accessible anonymously.</li>
+            <li>The user page should be accessible for all logged-in users</li>
+            <li>The admin page should be accessible for all logged-in administrators.</li>
+        </ul>
+
+    </p>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
