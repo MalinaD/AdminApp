@@ -1,8 +1,10 @@
 ﻿namespace AdminUserActionsApp.Context
 {
+    using AdminUserActionsApp.Models;
     using System;
     using System.Collections.Generic;
     using System.Data.Entity;
+    using Twitter.Data.Repositories;
 
     public class AppData
     {

@@ -1,5 +1,6 @@
 ﻿namespace AdminUserActionsApp.Context
 {
+    using AdminUserActionsApp.Models;
     using System.Data.Entity;
 
     public interface IAppContext

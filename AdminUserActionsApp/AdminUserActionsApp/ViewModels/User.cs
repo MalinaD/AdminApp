@@ -21,7 +21,7 @@
 
         public string Email { get; set; }
         public string AvatarUrl { get; set; }
-        public DateTime DateRegister { get; set; }
+        public DateTime? DateRegister { get; set; }
 
         
     }

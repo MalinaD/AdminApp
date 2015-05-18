@@ -19,7 +19,10 @@
         {
             this.ContactInfo = new ContactInfo();
             this.groups = new HashSet<Group>();
+            this.Messages = new HashSet<Message>();
         }
+
+        public virtual ICollection<Message> Messages { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User> manager)
         {
@@ -37,7 +40,7 @@
 
         public ContactInfo ContactInfo { get; set; }
 
-        public DateTime DateRegister { get; set; }
+        public DateTime? DateRegister { get; set; }
 
 
         [InverseProperty("Members")]
@@ -45,6 +48,13 @@
         {
             get { return this.groups; }
             set { this.groups = value; }
+        }
+
+        public class Message
+        {
+            public int Id { get; set; }
+            public string MessageText { get; set; }
+            public DateTime DateCreated { get; set; }
         }
 
     }

@@ -6,6 +6,8 @@ using System.Web.Mvc;
 
 namespace AdminUserActionsApp.Controllers
 {
+   // [Authorize(Roles="Administrator"])
+
     public class AdminController : Controller
     {
         // GET: Admin

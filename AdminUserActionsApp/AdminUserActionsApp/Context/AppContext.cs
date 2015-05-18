@@ -1,10 +1,11 @@
-﻿namespace AdminUserActionsApp.Context
+﻿
+namespace AdminUserActionsApp.Context
 {
+    using AdminUserActionsApp.Models;
     using Microsoft.AspNet.Identity.EntityFramework;
-    using Microsoft.AspNet.Identity;
+    using System.Configuration;
     using System.Data.Entity;
     using Migrations;
-    using System.Configuration;
 
     public class AppContext : IdentityDbContext<User>, IAppContext
     {
@@ -12,7 +13,7 @@
         public AppContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<AppContext, Configuration>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<AppContext, AdminUserActionsApp.Migrations.Configuration>());
         }
 
         public static AppContext Create()
